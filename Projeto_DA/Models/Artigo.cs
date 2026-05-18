@@ -8,6 +8,7 @@ namespace Projeto_DA.Models
 {
     internal class Artigo
     {
+        public int Id { get; set; }
         public TipoArtigo TipoArtigo { get; set; }
 
         public string Nome { get; set; }

@@ -8,6 +8,7 @@ namespace Projeto_DA.Models
 {
     internal class Orcamento
     {
+        public int Id { get; set; }
         public Utilizador Utilizador { get; set; }
 
         public int ValorMaximo { get; set; }
