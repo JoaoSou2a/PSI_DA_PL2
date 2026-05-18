@@ -11,5 +11,6 @@ namespace Projeto_DA.Models
         public TipoArtigo TipoArtigo { get; set; }
 
         public string Nome { get; set; }
+
     }
 }

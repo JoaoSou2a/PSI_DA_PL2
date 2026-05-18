@@ -13,5 +13,6 @@ namespace Projeto_DA.Models
         public int ValorMaximo { get; set; }
         public int Mes { get; set; }
         public int Ano { get; set; }
+
     }
 }
