@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_DA.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace Projeto_DA
 {
     internal class ItemCompra
     {
+        public Artigo Artigo { get; set; }
+        public Compra Compra { get; set; }
         public int Id { get; set; }
         public int QuantidadeAdquirida {  get; set; }
         public decimal PrecoUnitario { get; set; }

@@ -9,6 +9,6 @@ namespace Projeto_DA
     internal class ItemPrevisto : ItemCompra
     {
         public int Id { get; set; }
-        public string Observações { get; set; }
+        public string Observacoes { get; set; }
     }
 }
