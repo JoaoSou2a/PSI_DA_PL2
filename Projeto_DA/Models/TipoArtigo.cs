@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Projeto_DA.Models
 {
-    internal class Utilizador
+    internal class TipoArtigo
     {
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string Nome { get; set; }
-        public string Password { get; set; }
+        public string Categoria { get; set; }
     }
 }

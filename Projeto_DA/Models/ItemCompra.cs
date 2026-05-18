@@ -8,9 +8,8 @@ namespace Projeto_DA
 {
     internal class ItemCompra
     {
-
-
-        public int quantidadeAdquirida {  get; set; }
-        public decimal precoUnitario { get; set; }
+        public int Id { get; set; }
+        public int QuantidadeAdquirida {  get; set; }
+        public decimal PrecoUnitario { get; set; }
     }
 }

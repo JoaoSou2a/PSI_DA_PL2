@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Projeto_DA
 {
-    internal class ItemPrevisto
+    internal class ItemNaoPrevisto : ItemCompra
     {
+        public int Id { get; set; }
+        public string Observacoes {  get; set; }
     }
 }
