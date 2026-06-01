@@ -20,14 +20,7 @@ namespace Projeto_DA
         [STAThread]
         static void Main()
         {
-            Database.SetInitializer(new IShoppingInitializer());
-
-            /*using (var db = new IShoppingContext())
-            {
-                var Utilizador = new Utilizador { Username = "mauriciofixe", Nome = "mauricio", Password = "mauricao" };
-                db.Utilizadores.Add(Utilizador);
-                db.SaveChanges();
-            }*/
+           Database.SetInitializer(new IShoppingInitializer());
 
 
             //teste
