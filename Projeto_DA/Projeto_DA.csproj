@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Artigo.cs" />
+    <Compile Include="Models\Artigo.cs" />
     <Compile Include="Controllers\ArtigoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrcamentoController.cs" />
@@ -118,7 +118,6 @@
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Models\Artigo.cs" />
     <Compile Include="Models\Compra.cs" />
     <Compile Include="Models\ItemCompra.cs" />
     <Compile Include="Models\ItemNaoPrevisto.cs" />

@@ -1,17 +1,24 @@
-﻿using System;
+﻿using Projeto_DA.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projeto_DA.Models
+namespace Projeto_DA
 {
     internal class Artigo
     {
+
+
+
         public int Id { get; set; }
         public TipoArtigo TipoArtigo { get; set; }
-
         public string Nome { get; set; }
 
+        public string NomeCategoria
+        {
+            get { return $"{Nome} - {TipoArtigo?.Categoria}"; }
+        }
     }
 }
