@@ -10,6 +10,10 @@ namespace Projeto_DA
 {
     internal static class Program
     {
+        internal static class Sessao
+        {
+            public static Utilizador UtilizadorLogado { get; set; }
+        }
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
@@ -29,7 +33,9 @@ namespace Projeto_DA
             //teste
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            
+            Application.Run(new LoginForm());
         }
     }
 }
