@@ -14,10 +14,22 @@ namespace Projeto_DA
         [STAThread]
         static void Main()
         {
+<<<<<<< Updated upstream
+=======
+            Database.SetInitializer(new IShoppingInitializer());
+
+            /* using (var db = new IShoppingContext())
+            {
+                var Utilizador = new Utilizador { Username = "mauriciofixe", Nome = "mauricio", Password = "mauricao" };
+                db.Utilizadores.Add(Utilizador);
+                db.SaveChanges();
+            } */
+
+>>>>>>> Stashed changes
             //teste
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormTipoArtigos());
         }
     }
 }

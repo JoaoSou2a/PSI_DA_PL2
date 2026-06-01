@@ -58,14 +58,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Controllers\ArtigoController.cs" />
+    <Compile Include="FormArtigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArtigos.Designer.cs">
+      <DependentUpon>FormArtigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTipoArtigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTipoArtigos.Designer.cs">
+      <DependentUpon>FormTipoArtigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IShoppingInitializer.cs" />
+    <Compile Include="Models\Artigo.cs" />
+    <Compile Include="Models\Compra.cs" />
+    <Compile Include="IShoppingContext.cs" />
+    <Compile Include="Models\ItemCompra.cs" />
+    <Compile Include="Models\ItemNaoPrevisto.cs" />
+    <Compile Include="Models\ItemPrevisto.cs" />
+    <Compile Include="Models\Orcamento.cs" />
+    <Compile Include="Models\TipoArtigo.cs" />
+    <Compile Include="Models\Utilizador.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormArtigos.resx">
+      <DependentUpon>FormArtigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTipoArtigos.resx">
+      <DependentUpon>FormTipoArtigos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,6 +121,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< Updated upstream
+=======
+  <ItemGroup />
+>>>>>>> Stashed changes
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
