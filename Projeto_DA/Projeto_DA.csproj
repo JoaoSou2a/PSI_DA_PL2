@@ -13,7 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -60,11 +61,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Artigo.cs" />
+    <Compile Include="Controllers\ArtigoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrcamentoController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\UtilizadorController.cs" />
-    
+    <Compile Include="FormArtigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArtigos.Designer.cs">
+      <DependentUpon>FormArtigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTipoArtigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTipoArtigos.Designer.cs">
+      <DependentUpon>FormTipoArtigos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestaoUtilizador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,31 +117,7 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\ArtigoController.cs" />
-    <Compile Include="FormArtigos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormArtigos.Designer.cs">
-      <DependentUpon>FormArtigos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTipoArtigos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTipoArtigos.Designer.cs">
-      <DependentUpon>FormTipoArtigos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IShoppingInitializer.cs" />
-    <Compile Include="Models\Artigo.cs" />
-    <Compile Include="Models\Compra.cs" />
-    <Compile Include="IShoppingContext.cs" />
-    <Compile Include="Models\ItemCompra.cs" />
-    <Compile Include="Models\ItemNaoPrevisto.cs" />
-    <Compile Include="Models\ItemPrevisto.cs" />
-    <Compile Include="Models\Orcamento.cs" />
-    <Compile Include="Models\TipoArtigo.cs" />
-    <Compile Include="Models\Utilizador.cs" />
     <Compile Include="Program.cs" />
-    
     <Compile Include="Models\Artigo.cs" />
     <Compile Include="Models\Compra.cs" />
     <Compile Include="Models\ItemCompra.cs" />
@@ -136,7 +126,6 @@
     <Compile Include="Models\Orcamento.cs" />
     <Compile Include="Models\TipoArtigo.cs" />
     <Compile Include="Models\Utilizador.cs" />
-    
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -147,7 +136,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    
+    <EmbeddedResource Include="FormArtigos.resx">
+      <DependentUpon>FormArtigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTipoArtigos.resx">
+      <DependentUpon>FormTipoArtigos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PlaneamentoForm.resx">
       <DependentUpon>PlaneamentoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,7 +165,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -181,9 +174,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Icons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
