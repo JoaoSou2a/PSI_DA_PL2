@@ -13,8 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -65,6 +64,7 @@
     <Compile Include="Controllers\OrcamentoController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\UtilizadorController.cs" />
+    
     <Compile Include="GestaoUtilizador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,55 +72,65 @@
       <DependentUpon>GestaoUtilizador.cs</DependentUpon>
     </Compile>
     <Compile Include="IShoppingInitializer.cs" />
-    <Compile Include="Models\Artigo.cs" />
-    <Compile Include="Models\Compra.cs" />
+    <Compile Include="IShoppingContext.cs" />
     <Compile Include="PlaneamentoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PlaneamentoForm.Designer.cs">
       <DependentUpon>PlaneamentoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Artigo.cs" />
-    <Compile Include="Models\Compra.cs" />
-    <Compile Include="IShoppingContext.cs" />
-    <Compile Include="Models\ItemCompra.cs" />
-    <Compile Include="Models\ItemNaoPrevisto.cs" />
-    <Compile Include="Models\ItemPrevisto.cs" />
-    <Compile Include="Models\Orcamento.cs" />
-    <Compile Include="Models\TipoArtigo.cs" />
-    <Compile Include="Models\Utilizador.cs" />
-    <Compile Include="PrincipalForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PrincipalForm.Designer.cs">
-      <DependentUpon>PrincipalForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PlaneamentoForm.resx">
-      <DependentUpon>PlaneamentoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrincipalForm.resx">
-      <DependentUpon>PrincipalForm.cs</DependentUpon>
     <Compile Include="OrcamentoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrcamentoForm.Designer.cs">
       <DependentUpon>OrcamentoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    
+    <Compile Include="Models\Artigo.cs" />
+    <Compile Include="Models\Compra.cs" />
+    <Compile Include="Models\ItemCompra.cs" />
+    <Compile Include="Models\ItemNaoPrevisto.cs" />
+    <Compile Include="Models\ItemPrevisto.cs" />
+    <Compile Include="Models\Orcamento.cs" />
+    <Compile Include="Models\TipoArtigo.cs" />
+    <Compile Include="Models\Utilizador.cs" />
+    
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    
+    <EmbeddedResource Include="PlaneamentoForm.resx">
+      <DependentUpon>PlaneamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestaoUtilizador.resx">
       <DependentUpon>GestaoUtilizador.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,28 +140,20 @@
     <EmbeddedResource Include="OrcamentoForm.resx">
       <DependentUpon>OrcamentoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="RegisterForm.resx">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
-    </EmbeddedResource>
+    
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -163,7 +165,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los. Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.2\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.2\build\EntityFramework.targets'))" />
