@@ -198,6 +198,7 @@
             this.btnUtilizadores.TabIndex = 17;
             this.btnUtilizadores.Text = "Utilzadores";
             this.btnUtilizadores.UseVisualStyleBackColor = true;
+            this.btnUtilizadores.Click += new System.EventHandler(this.btnUtilizadores_Click);
             // 
             // button1
             // 

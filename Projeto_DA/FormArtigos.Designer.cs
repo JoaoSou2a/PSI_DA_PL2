@@ -68,122 +68,132 @@
             // 
             // lstArtigos
             // 
-            this.lstArtigos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstArtigos.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstArtigos.FormattingEnabled = true;
-            this.lstArtigos.ItemHeight = 25;
+            this.lstArtigos.ItemHeight = 26;
             this.lstArtigos.Location = new System.Drawing.Point(706, 133);
             this.lstArtigos.Name = "lstArtigos";
-            this.lstArtigos.Size = new System.Drawing.Size(554, 579);
+            this.lstArtigos.Size = new System.Drawing.Size(554, 576);
             this.lstArtigos.TabIndex = 1;
+            this.lstArtigos.SelectedIndexChanged += new System.EventHandler(this.lstArtigos_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 155);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(113, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 24);
+            this.label1.Size = new System.Drawing.Size(257, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ver Artigos pela Categoria:";
             // 
             // cbVerTipos
             // 
-            this.cbVerTipos.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbVerTipos.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVerTipos.FormattingEnabled = true;
-            this.cbVerTipos.Location = new System.Drawing.Point(259, 183);
+            this.cbVerTipos.Location = new System.Drawing.Point(383, 152);
             this.cbVerTipos.Name = "cbVerTipos";
-            this.cbVerTipos.Size = new System.Drawing.Size(197, 32);
+            this.cbVerTipos.Size = new System.Drawing.Size(197, 34);
             this.cbVerTipos.TabIndex = 3;
+            this.cbVerTipos.SelectedIndexChanged += new System.EventHandler(this.cbVerTipos_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(259, 245);
+            this.label2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(206, 275);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 24);
+            this.label2.Size = new System.Drawing.Size(164, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nome Do Artigo:";
             // 
             // txtAdicionarNome
             // 
-            this.txtAdicionarNome.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdicionarNome.Location = new System.Drawing.Point(264, 273);
+            this.txtAdicionarNome.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdicionarNome.Location = new System.Drawing.Point(378, 272);
             this.txtAdicionarNome.Name = "txtAdicionarNome";
-            this.txtAdicionarNome.Size = new System.Drawing.Size(192, 30);
+            this.txtAdicionarNome.Size = new System.Drawing.Size(192, 40);
             this.txtAdicionarNome.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(259, 306);
+            this.label3.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(264, 235);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 24);
+            this.label3.Size = new System.Drawing.Size(106, 26);
             this.label3.TabIndex = 6;
             this.label3.Text = "Categoria:";
             // 
             // cbAdicionarCategoria
             // 
-            this.cbAdicionarCategoria.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAdicionarCategoria.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAdicionarCategoria.FormattingEnabled = true;
-            this.cbAdicionarCategoria.Location = new System.Drawing.Point(259, 338);
+            this.cbAdicionarCategoria.Location = new System.Drawing.Point(378, 232);
             this.cbAdicionarCategoria.Name = "cbAdicionarCategoria";
-            this.cbAdicionarCategoria.Size = new System.Drawing.Size(197, 32);
+            this.cbAdicionarCategoria.Size = new System.Drawing.Size(197, 34);
             this.cbAdicionarCategoria.TabIndex = 7;
             // 
             // btnAdicionarArtigo
             // 
-            this.btnAdicionarArtigo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarArtigo.Location = new System.Drawing.Point(300, 377);
+            this.btnAdicionarArtigo.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAdicionarArtigo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarArtigo.Location = new System.Drawing.Point(300, 328);
             this.btnAdicionarArtigo.Name = "btnAdicionarArtigo";
             this.btnAdicionarArtigo.Size = new System.Drawing.Size(129, 47);
             this.btnAdicionarArtigo.TabIndex = 8;
             this.btnAdicionarArtigo.Text = "Adicionar";
-            this.btnAdicionarArtigo.UseVisualStyleBackColor = true;
+            this.btnAdicionarArtigo.UseVisualStyleBackColor = false;
+            this.btnAdicionarArtigo.Click += new System.EventHandler(this.btnAdicionarArtigo_Click);
             // 
             // txtEditarNome
             // 
-            this.txtEditarNome.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditarNome.Location = new System.Drawing.Point(264, 467);
+            this.txtEditarNome.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditarNome.Location = new System.Drawing.Point(259, 476);
             this.txtEditarNome.Name = "txtEditarNome";
-            this.txtEditarNome.Size = new System.Drawing.Size(197, 30);
+            this.txtEditarNome.Size = new System.Drawing.Size(197, 40);
             this.txtEditarNome.TabIndex = 9;
+            this.txtEditarNome.Text = "Selecione um artigo";
             // 
             // cbEditarCategoria
             // 
-            this.cbEditarCategoria.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEditarCategoria.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEditarCategoria.FormattingEnabled = true;
-            this.cbEditarCategoria.Location = new System.Drawing.Point(264, 504);
+            this.cbEditarCategoria.Location = new System.Drawing.Point(259, 436);
             this.cbEditarCategoria.Name = "cbEditarCategoria";
-            this.cbEditarCategoria.Size = new System.Drawing.Size(197, 32);
+            this.cbEditarCategoria.Size = new System.Drawing.Size(197, 34);
             this.cbEditarCategoria.TabIndex = 10;
             // 
             // btnEditarArtigo
             // 
-            this.btnEditarArtigo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarArtigo.Location = new System.Drawing.Point(300, 550);
+            this.btnEditarArtigo.BackColor = System.Drawing.Color.Khaki;
+            this.btnEditarArtigo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarArtigo.Location = new System.Drawing.Point(300, 533);
             this.btnEditarArtigo.Name = "btnEditarArtigo";
             this.btnEditarArtigo.Size = new System.Drawing.Size(129, 44);
             this.btnEditarArtigo.TabIndex = 11;
             this.btnEditarArtigo.Text = "Editar";
-            this.btnEditarArtigo.UseVisualStyleBackColor = true;
+            this.btnEditarArtigo.UseVisualStyleBackColor = false;
+            this.btnEditarArtigo.Click += new System.EventHandler(this.btnEditarArtigo_Click);
             // 
             // btnEliminarArtigo
             // 
-            this.btnEliminarArtigo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarArtigo.BackColor = System.Drawing.Color.IndianRed;
+            this.btnEliminarArtigo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarArtigo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarArtigo.Location = new System.Drawing.Point(278, 630);
             this.btnEliminarArtigo.Name = "btnEliminarArtigo";
             this.btnEliminarArtigo.Size = new System.Drawing.Size(178, 46);
             this.btnEliminarArtigo.TabIndex = 12;
             this.btnEliminarArtigo.Text = "Eliminar";
-            this.btnEliminarArtigo.UseVisualStyleBackColor = true;
+            this.btnEliminarArtigo.UseVisualStyleBackColor = false;
+            this.btnEliminarArtigo.Click += new System.EventHandler(this.btnEliminarArtigo_Click);
             // 
             // FormArtigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1290, 741);
             this.Controls.Add(this.btnEliminarArtigo);
             this.Controls.Add(this.btnEditarArtigo);
@@ -200,6 +210,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormArtigos";
             this.Text = "FormArtigos";
+            this.Load += new System.EventHandler(this.FormArtigos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

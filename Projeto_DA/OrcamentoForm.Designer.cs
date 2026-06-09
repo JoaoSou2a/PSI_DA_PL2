@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnIrPara = new System.Windows.Forms.Button();
             this.btnCriarOrcamento = new System.Windows.Forms.Button();
             this.numericMes = new System.Windows.Forms.NumericUpDown();
             this.numericAno = new System.Windows.Forms.NumericUpDown();
@@ -47,7 +48,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRemover = new System.Windows.Forms.Button();
-            this.btnIrPara = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericMes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAno)).BeginInit();
@@ -72,6 +74,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnIrPara);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
@@ -79,19 +83,32 @@
             this.panel1.Size = new System.Drawing.Size(1153, 86);
             this.panel1.TabIndex = 1;
             // 
+            // btnIrPara
+            // 
+            this.btnIrPara.Location = new System.Drawing.Point(11, 12);
+            this.btnIrPara.Name = "btnIrPara";
+            this.btnIrPara.Size = new System.Drawing.Size(75, 23);
+            this.btnIrPara.TabIndex = 1;
+            this.btnIrPara.Text = "Utilizadores";
+            this.btnIrPara.UseVisualStyleBackColor = true;
+            this.btnIrPara.Click += new System.EventHandler(this.btnIrPara_Click);
+            // 
             // btnCriarOrcamento
             // 
-            this.btnCriarOrcamento.Location = new System.Drawing.Point(718, 116);
+            this.btnCriarOrcamento.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnCriarOrcamento.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarOrcamento.Location = new System.Drawing.Point(699, 114);
             this.btnCriarOrcamento.Name = "btnCriarOrcamento";
-            this.btnCriarOrcamento.Size = new System.Drawing.Size(75, 23);
+            this.btnCriarOrcamento.Size = new System.Drawing.Size(88, 41);
             this.btnCriarOrcamento.TabIndex = 3;
             this.btnCriarOrcamento.Text = "Criar";
-            this.btnCriarOrcamento.UseVisualStyleBackColor = true;
+            this.btnCriarOrcamento.UseVisualStyleBackColor = false;
             this.btnCriarOrcamento.Click += new System.EventHandler(this.btnCriarOrcamento_Click);
             // 
             // numericMes
             // 
-            this.numericMes.Location = new System.Drawing.Point(494, 117);
+            this.numericMes.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericMes.Location = new System.Drawing.Point(475, 115);
             this.numericMes.Maximum = new decimal(new int[] {
             12,
             0,
@@ -103,8 +120,9 @@
             0,
             0});
             this.numericMes.Name = "numericMes";
-            this.numericMes.Size = new System.Drawing.Size(71, 22);
+            this.numericMes.Size = new System.Drawing.Size(71, 40);
             this.numericMes.TabIndex = 8;
+            this.numericMes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericMes.Value = new decimal(new int[] {
             1,
             0,
@@ -113,7 +131,8 @@
             // 
             // numericAno
             // 
-            this.numericAno.Location = new System.Drawing.Point(627, 117);
+            this.numericAno.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericAno.Location = new System.Drawing.Point(608, 115);
             this.numericAno.Maximum = new decimal(new int[] {
             2100,
             0,
@@ -125,7 +144,7 @@
             0,
             0});
             this.numericAno.Name = "numericAno";
-            this.numericAno.Size = new System.Drawing.Size(71, 22);
+            this.numericAno.Size = new System.Drawing.Size(71, 40);
             this.numericAno.TabIndex = 9;
             this.numericAno.Value = new decimal(new int[] {
             2026,
@@ -136,59 +155,64 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(304, 119);
+            this.label2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(249, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.Size = new System.Drawing.Size(58, 26);
             this.label2.TabIndex = 11;
             this.label2.Text = "Valor";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(455, 117);
+            this.label3.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(418, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 16);
+            this.label3.Size = new System.Drawing.Size(51, 26);
             this.label3.TabIndex = 12;
             this.label3.Text = "Mês";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(580, 117);
+            this.label4.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(554, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 16);
+            this.label4.Size = new System.Drawing.Size(48, 26);
             this.label4.TabIndex = 13;
             this.label4.Text = "Ano";
             // 
             // listBoxOrcamentos
             // 
-            this.listBoxOrcamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxOrcamentos.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxOrcamentos.FormattingEnabled = true;
-            this.listBoxOrcamentos.ItemHeight = 25;
-            this.listBoxOrcamentos.Location = new System.Drawing.Point(51, 175);
+            this.listBoxOrcamentos.ItemHeight = 26;
+            this.listBoxOrcamentos.Location = new System.Drawing.Point(12, 175);
             this.listBoxOrcamentos.Name = "listBoxOrcamentos";
-            this.listBoxOrcamentos.Size = new System.Drawing.Size(398, 379);
+            this.listBoxOrcamentos.Size = new System.Drawing.Size(704, 368);
             this.listBoxOrcamentos.TabIndex = 14;
             this.listBoxOrcamentos.SelectedIndexChanged += new System.EventHandler(this.listBoxOrcamentos_SelectedIndexChanged);
             // 
             // numericValorMaximo
             // 
-            this.numericValorMaximo.Location = new System.Drawing.Point(350, 116);
+            this.numericValorMaximo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericValorMaximo.Location = new System.Drawing.Point(313, 115);
             this.numericValorMaximo.Maximum = new decimal(new int[] {
             1215752192,
             23,
             0,
             0});
             this.numericValorMaximo.Name = "numericValorMaximo";
-            this.numericValorMaximo.Size = new System.Drawing.Size(99, 22);
+            this.numericValorMaximo.Size = new System.Drawing.Size(99, 40);
             this.numericValorMaximo.TabIndex = 15;
+            this.numericValorMaximo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 43);
+            this.label6.Location = new System.Drawing.Point(22, 45);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 16);
+            this.label6.Size = new System.Drawing.Size(53, 23);
             this.label6.TabIndex = 19;
             this.label6.Text = "Valor";
             // 
@@ -197,7 +221,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(20, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 16);
+            this.label7.Size = new System.Drawing.Size(46, 23);
             this.label7.TabIndex = 20;
             this.label7.Text = "Mês";
             // 
@@ -206,7 +230,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(20, 167);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 16);
+            this.label8.Size = new System.Drawing.Size(42, 23);
             this.label8.TabIndex = 21;
             this.label8.Text = "Ano";
             // 
@@ -219,7 +243,7 @@
             0,
             0});
             this.numericValorEditar.Name = "numericValorEditar";
-            this.numericValorEditar.Size = new System.Drawing.Size(99, 22);
+            this.numericValorEditar.Size = new System.Drawing.Size(99, 36);
             this.numericValorEditar.TabIndex = 22;
             // 
             // numericMesEditar
@@ -236,7 +260,7 @@
             0,
             0});
             this.numericMesEditar.Name = "numericMesEditar";
-            this.numericMesEditar.Size = new System.Drawing.Size(71, 22);
+            this.numericMesEditar.Size = new System.Drawing.Size(71, 36);
             this.numericMesEditar.TabIndex = 23;
             this.numericMesEditar.Value = new decimal(new int[] {
             1,
@@ -258,7 +282,7 @@
             0,
             0});
             this.numericAnoEditar.Name = "numericAnoEditar";
-            this.numericAnoEditar.Size = new System.Drawing.Size(71, 22);
+            this.numericAnoEditar.Size = new System.Drawing.Size(71, 36);
             this.numericAnoEditar.TabIndex = 24;
             this.numericAnoEditar.Value = new decimal(new int[] {
             2026,
@@ -268,12 +292,14 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnGuardar.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(23, 229);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(100, 34);
             this.btnGuardar.TabIndex = 25;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // groupBox1
@@ -286,32 +312,47 @@
             this.groupBox1.Controls.Add(this.numericMesEditar);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.numericValorEditar);
+            this.groupBox1.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(734, 175);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(351, 269);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar Orçamento";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnRemover
             // 
+            this.btnRemover.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemover.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRemover.Location = new System.Drawing.Point(152, 229);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.Size = new System.Drawing.Size(105, 34);
             this.btnRemover.TabIndex = 26;
             this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.UseVisualStyleBackColor = false;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
-            // btnIrPara
+            // button1
             // 
-            this.btnIrPara.Location = new System.Drawing.Point(11, 12);
-            this.btnIrPara.Name = "btnIrPara";
-            this.btnIrPara.Size = new System.Drawing.Size(75, 23);
-            this.btnIrPara.TabIndex = 1;
-            this.btnIrPara.Text = "Utilizadores";
-            this.btnIrPara.UseVisualStyleBackColor = true;
-            this.btnIrPara.Click += new System.EventHandler(this.btnIrPara_Click);
+            this.button1.Location = new System.Drawing.Point(108, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Estatísticas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(240, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Artigos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // OrcamentoForm
             // 
@@ -367,5 +408,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnIrPara;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

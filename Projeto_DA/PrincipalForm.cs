@@ -16,5 +16,10 @@ namespace Projeto_DA
         {
             InitializeComponent();
         }
+
+        private void btnUtilizadores_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

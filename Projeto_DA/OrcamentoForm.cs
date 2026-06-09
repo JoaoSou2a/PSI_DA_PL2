@@ -101,8 +101,8 @@ namespace Projeto_DA
             int novoMes = (int)numericMesEditar.Value;
             int novoAno = (int)numericAnoEditar.Value;
 
-            
-            bool sucesso = orcamentoController.Atualizar(orcamentoSelecionado.Id, novoValor, novoMes, novoAno);
+            int idLogado = Sessao.UtilizadorLogado.Id;
+            bool sucesso = orcamentoController.Atualizar(orcamentoSelecionado.Id, novoValor, novoMes, novoAno, idLogado);
 
             if (sucesso)
             {
@@ -169,6 +169,29 @@ namespace Projeto_DA
             GestaoUtilizador UtilizadoresForm = new GestaoUtilizador();
             UtilizadoresForm.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Estatisticas EstatisticasForm = new Estatisticas();
+            EstatisticasForm.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FormTipoArtigos ArtigoForm = new FormTipoArtigos();
+            ArtigoForm.ShowDialog();
+            this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

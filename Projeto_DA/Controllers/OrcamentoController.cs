@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -52,12 +53,15 @@ namespace Projeto_DA.Controllers
         {
             using (var db = new IShoppingContext())
             {
-                return db.Orcamentos.ToList();
+                return db.Orcamentos
+                         .Include(o => o.Utilizador)
+                         .Include(o => o.UtilizadorEditor)
+                         .ToList();
             }
         }
 
         //atualizar os dados de um orçamento que ja existem
-        public bool Atualizar(int id, decimal valorMaximo, int mes, int ano)
+        public bool Atualizar(int id, decimal valorMaximo, int mes, int ano, int utilizadorId)
         {
             using (var db = new IShoppingContext())
             {
@@ -72,10 +76,13 @@ namespace Projeto_DA.Controllers
                     return false; // nao deixa
                 }
 
+                var editorDaBD = db.Utilizadores.Find(utilizadorId);
+
                 //altera as propriedades com os novos valores vindos do form
                 orcamentoDaBd.ValorMaximo = valorMaximo;
                 orcamentoDaBd.Mes = mes;
                 orcamentoDaBd.Ano = ano;
+                orcamentoDaBd.UtilizadorEditor = editorDaBD;
 
                 db.SaveChanges();
                 return true;

@@ -12,7 +12,7 @@ namespace Projeto_DA
     {
         protected override void Seed(IShoppingContext context)
         {
-            context.Utilizadores.Add(new Utilizador { Username = "mauriciobacanoide", Nome = "Mauricio Tranquilo", Password = "mauricao" });
+            context.Utilizadores.Add(new Utilizador { Username = "mauriciobacanoide", Nome = "Mauricio Tranquilo", Password = Seguranca.EncriptarPassword("mauricao") });
             base.Seed(context);
         }
     }
