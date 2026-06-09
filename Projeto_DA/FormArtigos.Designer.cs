@@ -1,4 +1,4 @@
-﻿namespace Projeto_DA
+namespace Projeto_DA
 {
     partial class FormArtigos
     {
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormArtigos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picbox_voltar = new System.Windows.Forms.PictureBox();
             this.txtgestaoartigos = new System.Windows.Forms.Label();
-            this.lstArtigos = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbVerTipos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,17 +43,31 @@
             this.cbEditarCategoria = new System.Windows.Forms.ComboBox();
             this.btnEditarArtigo = new System.Windows.Forms.Button();
             this.btnEliminarArtigo = new System.Windows.Forms.Button();
+            this.lstArtigos = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.picbox_voltar);
             this.panel1.Controls.Add(this.txtgestaoartigos);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1291, 115);
             this.panel1.TabIndex = 0;
+            // 
+            // picbox_voltar
+            // 
+            this.picbox_voltar.Image = ((System.Drawing.Image)(resources.GetObject("picbox_voltar.Image")));
+            this.picbox_voltar.Location = new System.Drawing.Point(53, 38);
+            this.picbox_voltar.Name = "picbox_voltar";
+            this.picbox_voltar.Size = new System.Drawing.Size(50, 39);
+            this.picbox_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbox_voltar.TabIndex = 3;
+            this.picbox_voltar.TabStop = false;
+            this.picbox_voltar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtgestaoartigos
             // 
@@ -60,7 +75,7 @@
             this.txtgestaoartigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtgestaoartigos.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtgestaoartigos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtgestaoartigos.Location = new System.Drawing.Point(539, 38);
+            this.txtgestaoartigos.Location = new System.Drawing.Point(405, 38);
             this.txtgestaoartigos.Name = "txtgestaoartigos";
             this.txtgestaoartigos.Size = new System.Drawing.Size(257, 36);
             this.txtgestaoartigos.TabIndex = 2;
@@ -140,7 +155,7 @@
             this.btnAdicionarArtigo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarArtigo.Location = new System.Drawing.Point(300, 328);
             this.btnAdicionarArtigo.Name = "btnAdicionarArtigo";
-            this.btnAdicionarArtigo.Size = new System.Drawing.Size(129, 47);
+            this.btnAdicionarArtigo.Size = new System.Drawing.Size(129, 39);
             this.btnAdicionarArtigo.TabIndex = 8;
             this.btnAdicionarArtigo.Text = "Adicionar";
             this.btnAdicionarArtigo.UseVisualStyleBackColor = false;
@@ -189,6 +204,15 @@
             this.btnEliminarArtigo.UseVisualStyleBackColor = false;
             this.btnEliminarArtigo.Click += new System.EventHandler(this.btnEliminarArtigo_Click);
             // 
+            // lstArtigos
+            // 
+            this.lstArtigos.FormattingEnabled = true;
+            this.lstArtigos.ItemHeight = 16;
+            this.lstArtigos.Location = new System.Drawing.Point(35, 234);
+            this.lstArtigos.Name = "lstArtigos";
+            this.lstArtigos.Size = new System.Drawing.Size(503, 340);
+            this.lstArtigos.TabIndex = 13;
+            // 
             // FormArtigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,13 +230,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbVerTipos);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lstArtigos);
             this.Controls.Add(this.panel1);
             this.Name = "FormArtigos";
             this.Text = "FormArtigos";
             this.Load += new System.EventHandler(this.FormArtigos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +246,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label txtgestaoartigos;
-        private System.Windows.Forms.ListBox lstArtigos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbVerTipos;
         private System.Windows.Forms.Label label2;
@@ -234,5 +257,7 @@
         private System.Windows.Forms.ComboBox cbEditarCategoria;
         private System.Windows.Forms.Button btnEditarArtigo;
         private System.Windows.Forms.Button btnEliminarArtigo;
+        private System.Windows.Forms.PictureBox picbox_voltar;
+        private System.Windows.Forms.ListBox lstArtigos;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_DA.Models
 {
-    internal class Orcamento
+    public class Orcamento
     {
         public Orcamento()
         {

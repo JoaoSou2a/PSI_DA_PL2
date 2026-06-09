@@ -63,11 +63,22 @@
   <ItemGroup>
     <Compile Include="Controllers\EstatisticasController.cs" />
     <Compile Include="Estatisticas.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estatisticas.Designer.cs">
       <DependentUpon>Estatisticas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CompraController.cs" />
+    <Compile Include="Controllers\CriarAlterarCompraController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ModoCompraController.cs" />
+    <Compile Include="Controllers\PlaneamentoController.cs" />
+    <Compile Include="Criar_AlterarCompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Criar_AlterarCompraForm.Designer.cs">
+      <DependentUpon>Criar_AlterarCompraForm.cs</DependentUpon>
+    </Compile>
+      <SubType>Form</SubType>
     <Compile Include="Models\Artigo.cs" />
     <Compile Include="Controllers\ArtigoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -94,6 +105,12 @@
     </Compile>
     <Compile Include="IShoppingInitializer.cs" />
     <Compile Include="IShoppingContext.cs" />
+    <Compile Include="ModoCompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModoCompraForm.Designer.cs">
+      <DependentUpon>ModoCompraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlaneamentoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +163,17 @@
     <EmbeddedResource Include="Estatisticas.resx">
       <DependentUpon>Estatisticas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Criar_AlterarCompraForm.resx">
+      <DependentUpon>Criar_AlterarCompraForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormArtigos.resx">
       <DependentUpon>FormArtigos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTipoArtigos.resx">
       <DependentUpon>FormTipoArtigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModoCompraForm.resx">
+      <DependentUpon>ModoCompraForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlaneamentoForm.resx">
       <DependentUpon>PlaneamentoForm.cs</DependentUpon>
@@ -176,6 +199,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ItemPrevisto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

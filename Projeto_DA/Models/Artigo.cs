@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_DA
 {
-    internal class Artigo
+    public class Artigo
     {
 
 
@@ -19,6 +19,11 @@ namespace Projeto_DA
         public string NomeCategoria
         {
             get { return $"{Nome} - {TipoArtigo?.Categoria}"; }
+        }
+
+        public override string ToString()
+        {
+            return $"{Nome}";
         }
     }
 }

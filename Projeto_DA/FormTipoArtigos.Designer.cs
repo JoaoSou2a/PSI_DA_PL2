@@ -1,4 +1,4 @@
-﻿namespace Projeto_DA
+namespace Projeto_DA
 {
     partial class FormTipoArtigos
     {
@@ -40,6 +40,7 @@
             this.lstTipos = new System.Windows.Forms.ListBox();
             btnAdicionarTipo = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +49,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(423, 29);
+            this.label1.Location = new System.Drawing.Point(368, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 36);
             this.label1.TabIndex = 1;
@@ -103,7 +104,7 @@
             this.btnEditarTipo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarTipo.Location = new System.Drawing.Point(222, 364);
             this.btnEditarTipo.Name = "btnEditarTipo";
-            this.btnEditarTipo.Size = new System.Drawing.Size(150, 31);
+            this.btnEditarTipo.Size = new System.Drawing.Size(150, 44);
             this.btnEditarTipo.TabIndex = 7;
             this.btnEditarTipo.Text = "Editar";
             this.btnEditarTipo.UseVisualStyleBackColor = false;
@@ -120,7 +121,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.btnArt);
+            this.panel2.Controls.Add(this.picbox_voltar);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(-1, 1);
             this.panel2.Name = "panel2";
@@ -129,9 +130,10 @@
             // 
             // btnArt
             // 
-            this.btnArt.Location = new System.Drawing.Point(13, 11);
+            this.btnArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArt.Location = new System.Drawing.Point(87, 129);
             this.btnArt.Name = "btnArt";
-            this.btnArt.Size = new System.Drawing.Size(148, 24);
+            this.btnArt.Size = new System.Drawing.Size(281, 44);
             this.btnArt.TabIndex = 2;
             this.btnArt.Text = "Gestão de Artigos";
             this.btnArt.UseVisualStyleBackColor = true;
@@ -167,6 +169,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +185,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListBox lstTipos;
         private System.Windows.Forms.Button btnArt;
+        private System.Windows.Forms.PictureBox picbox_voltar;
     }
 }

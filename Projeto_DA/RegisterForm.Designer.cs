@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegistar = new System.Windows.Forms.Button();
@@ -39,16 +40,18 @@
             this.btnIrParaLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.picBox_Logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtNome.Location = new System.Drawing.Point(57, 208);
+            this.txtNome.Location = new System.Drawing.Point(57, 210);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(163, 35);
+            this.txtNome.Size = new System.Drawing.Size(180, 35);
             this.txtNome.TabIndex = 15;
             // 
             // label4
@@ -67,9 +70,9 @@
             this.btnRegistar.BackColor = System.Drawing.Color.LightGreen;
             this.btnRegistar.Font = new System.Drawing.Font("Yu Gothic", 12F);
             this.btnRegistar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRegistar.Location = new System.Drawing.Point(84, 323);
+            this.btnRegistar.Location = new System.Drawing.Point(89, 323);
             this.btnRegistar.Name = "btnRegistar";
-            this.btnRegistar.Size = new System.Drawing.Size(112, 34);
+            this.btnRegistar.Size = new System.Drawing.Size(117, 34);
             this.btnRegistar.TabIndex = 13;
             this.btnRegistar.Text = "Registar";
             this.btnRegistar.UseVisualStyleBackColor = false;
@@ -93,7 +96,7 @@
             this.txtPassword.Location = new System.Drawing.Point(60, 279);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(160, 35);
+            this.txtPassword.Size = new System.Drawing.Size(177, 35);
             this.txtPassword.TabIndex = 11;
             // 
             // label2
@@ -113,7 +116,7 @@
             this.txtUsername.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtUsername.Location = new System.Drawing.Point(57, 140);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(160, 35);
+            this.txtUsername.Size = new System.Drawing.Size(180, 35);
             this.txtUsername.TabIndex = 9;
             // 
             // label1
@@ -129,7 +132,7 @@
             // 
             // btnIrParaLogin
             // 
-            this.btnIrParaLogin.Location = new System.Drawing.Point(99, 363);
+            this.btnIrParaLogin.Location = new System.Drawing.Point(106, 363);
             this.btnIrParaLogin.Name = "btnIrParaLogin";
             this.btnIrParaLogin.Size = new System.Drawing.Size(81, 33);
             this.btnIrParaLogin.TabIndex = 16;
@@ -150,7 +153,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(425, 0);
+            this.panel1.Location = new System.Drawing.Point(353, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 422);
             this.panel1.TabIndex = 17;
@@ -166,17 +169,28 @@
             this.label6.TabIndex = 12;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // picBox_Logo
+            // 
+            this.picBox_Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_Logo.BackgroundImage")));
+            this.picBox_Logo.Location = new System.Drawing.Point(79, 179);
+            this.picBox_Logo.Name = "picBox_Logo";
+            this.picBox_Logo.Size = new System.Drawing.Size(194, 53);
+            this.picBox_Logo.TabIndex = 18;
+            this.picBox_Logo.TabStop = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(702, 418);
+            this.ClientSize = new System.Drawing.Size(630, 418);
+            this.Controls.Add(this.picBox_Logo);
             this.Controls.Add(this.panel1);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,5 +208,6 @@
         private System.Windows.Forms.Button btnIrParaLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox picBox_Logo;
     }
 }

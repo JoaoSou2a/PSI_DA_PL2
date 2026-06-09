@@ -121,5 +121,14 @@ namespace Projeto_DA
             formArtigos.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            PrincipalForm form = new PrincipalForm();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="picbox_voltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picBox_Voltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        5AAAAeQB+hcYWwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJnSURBVHhe7Zq7
+        4wAAAeMBqFO+JAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJnSURBVHhe7Zq7
         ihRRFEWXjx8wM9LExEQR/2AScxMD34lfYGRsogyIiCAivsDHDPgNRkZqLoKZBjKxYKC2nH7ZfXZ1T52q
         Gm7dugar6VqnTsHe0O9mNBpRMiJKQ0RpiCgNEaUhYi8ADgPHgH1+lhoRXQKcAj4AdmB8B87581IioiuA
         DeDHQvgZf2zmz0+FiC5YE37GW7+TChFtqRHe2PF7qRDRhprhjfd+NxUimhIIb1zz+6kQ0YRg+C2/nxIR
@@ -135,4 +135,10 @@
         SkNEafwFfx5fquit7SIAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="itemPrevistoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>21, 15</value>
+  </metadata>
+  <metadata name="itemPrevistoBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>271, 18</value>
+  </metadata>
 </root>

@@ -1,4 +1,4 @@
-﻿using Projeto_DA.Controllers;
+using Projeto_DA.Controllers;
 using Projeto_DA.Models;
 using System;
 using System.Collections.Generic;
@@ -162,36 +162,15 @@ namespace Projeto_DA
             }
         }
 
-        private void btnIrPara_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            GestaoUtilizador UtilizadoresForm = new GestaoUtilizador();
-            UtilizadoresForm.ShowDialog();
+            PrincipalForm form = new PrincipalForm();
+            form.ShowDialog();
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
 
-            Estatisticas EstatisticasForm = new Estatisticas();
-            EstatisticasForm.ShowDialog();
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            FormTipoArtigos ArtigoForm = new FormTipoArtigos();
-            ArtigoForm.ShowDialog();
-            this.Close();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

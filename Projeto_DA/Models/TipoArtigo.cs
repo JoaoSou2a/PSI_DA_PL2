@@ -7,9 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Projeto_DA.Models
 {
-    internal class TipoArtigo
+    public class TipoArtigo
     {
         public int Id { get; set; }
         public string Categoria { get; set; }
+
+        public override string ToString()
+        {
+            return Categoria;
+        }
     }
 }
