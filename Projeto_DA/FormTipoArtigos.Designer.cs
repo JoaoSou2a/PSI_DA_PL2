@@ -28,7 +28,8 @@ namespace Projeto_DA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button btnAdicionarTipo;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTipoArtigos));
+            this.btnAdicionarTipo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,10 +39,22 @@ namespace Projeto_DA
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnArt = new System.Windows.Forms.Button();
             this.lstTipos = new System.Windows.Forms.ListBox();
-            btnAdicionarTipo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnAdicionarTipo
+            // 
+            this.btnAdicionarTipo.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAdicionarTipo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarTipo.Location = new System.Drawing.Point(222, 220);
+            this.btnAdicionarTipo.Name = "btnAdicionarTipo";
+            this.btnAdicionarTipo.Size = new System.Drawing.Size(150, 36);
+            this.btnAdicionarTipo.TabIndex = 3;
+            this.btnAdicionarTipo.Text = "Adicionar";
+            this.btnAdicionarTipo.UseVisualStyleBackColor = false;
+            this.btnAdicionarTipo.Click += new System.EventHandler(this.btnAdicionarTipo_Click);
             // 
             // label1
             // 
@@ -54,18 +67,6 @@ namespace Projeto_DA
             this.label1.Size = new System.Drawing.Size(367, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Gestão do Tipo de Artigos";
-            // 
-            // btnAdicionarTipo
-            // 
-            btnAdicionarTipo.BackColor = System.Drawing.Color.SpringGreen;
-            btnAdicionarTipo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnAdicionarTipo.Location = new System.Drawing.Point(222, 220);
-            btnAdicionarTipo.Name = "btnAdicionarTipo";
-            btnAdicionarTipo.Size = new System.Drawing.Size(150, 36);
-            btnAdicionarTipo.TabIndex = 3;
-            btnAdicionarTipo.Text = "Adicionar";
-            btnAdicionarTipo.UseVisualStyleBackColor = false;
-            btnAdicionarTipo.Click += new System.EventHandler(this.btnAdicionarTipo_Click);
             // 
             // txtCategoria
             // 
@@ -121,7 +122,7 @@ namespace Projeto_DA
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.picbox_voltar);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(-1, 1);
             this.panel2.Name = "panel2";
@@ -150,6 +151,17 @@ namespace Projeto_DA
             this.lstTipos.TabIndex = 11;
             this.lstTipos.SelectedIndexChanged += new System.EventHandler(this.lstTipos_SelectedIndexChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(48, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // FormTipoArtigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -163,13 +175,13 @@ namespace Projeto_DA
             this.Controls.Add(this.btnEliminarTipo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCategoria);
-            this.Controls.Add(btnAdicionarTipo);
+            this.Controls.Add(this.btnAdicionarTipo);
             this.Name = "FormTipoArtigos";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +198,7 @@ namespace Projeto_DA
         private System.Windows.Forms.ListBox lstTipos;
         private System.Windows.Forms.Button btnArt;
         private System.Windows.Forms.PictureBox picbox_voltar;
+        private System.Windows.Forms.Button btnAdicionarTipo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

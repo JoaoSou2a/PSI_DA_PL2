@@ -89,7 +89,7 @@ namespace Projeto_DA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // 1. Validação: O utilizador clicou mesmo em algum orçamento antes?
+            //validacao
             if (orcamentoSelecionado == null)
             {
                 MessageBox.Show("Por favor, selecione primeiro um orçamento na lista para o poder alterar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);

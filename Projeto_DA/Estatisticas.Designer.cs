@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estatisticas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -44,15 +45,18 @@
             this.lblSugestaoOrcamento = new System.Windows.Forms.Label();
             this.btnGerarSugestoes = new System.Windows.Forms.Button();
             this.listBoxArtigosSugeridos = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -79,7 +83,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 92);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1046, 493);
+            this.tabControl1.Size = new System.Drawing.Size(1110, 493);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -90,7 +94,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1038, 463);
+            this.tabPage1.Size = new System.Drawing.Size(1102, 463);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -104,15 +108,16 @@
             this.lblSemanaAtualIdentificada.Size = new System.Drawing.Size(136, 22);
             this.lblSemanaAtualIdentificada.TabIndex = 2;
             this.lblSemanaAtualIdentificada.Text = "Semana Atual: ";
+            this.lblSemanaAtualIdentificada.Visible = false;
             // 
             // listBoxComprasPercentagens
             // 
             this.listBoxComprasPercentagens.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxComprasPercentagens.FormattingEnabled = true;
             this.listBoxComprasPercentagens.ItemHeight = 17;
-            this.listBoxComprasPercentagens.Location = new System.Drawing.Point(528, 28);
+            this.listBoxComprasPercentagens.Location = new System.Drawing.Point(587, 28);
             this.listBoxComprasPercentagens.Name = "listBoxComprasPercentagens";
-            this.listBoxComprasPercentagens.Size = new System.Drawing.Size(491, 395);
+            this.listBoxComprasPercentagens.Size = new System.Drawing.Size(509, 395);
             this.listBoxComprasPercentagens.TabIndex = 1;
             // 
             // listBoxHistoricoMensal
@@ -122,7 +127,7 @@
             this.listBoxHistoricoMensal.ItemHeight = 17;
             this.listBoxHistoricoMensal.Location = new System.Drawing.Point(16, 28);
             this.listBoxHistoricoMensal.Name = "listBoxHistoricoMensal";
-            this.listBoxHistoricoMensal.Size = new System.Drawing.Size(479, 395);
+            this.listBoxHistoricoMensal.Size = new System.Drawing.Size(565, 395);
             this.listBoxHistoricoMensal.TabIndex = 0;
             this.listBoxHistoricoMensal.SelectedIndexChanged += new System.EventHandler(this.listBoxHistoricoMensal_SelectedIndexChanged);
             // 
@@ -191,7 +196,7 @@
             // lblSemanaIdentificada
             // 
             this.lblSemanaIdentificada.AutoSize = true;
-            this.lblSemanaIdentificada.Location = new System.Drawing.Point(240, 3);
+            this.lblSemanaIdentificada.Location = new System.Drawing.Point(17, 6);
             this.lblSemanaIdentificada.Name = "lblSemanaIdentificada";
             this.lblSemanaIdentificada.Size = new System.Drawing.Size(69, 17);
             this.lblSemanaIdentificada.TabIndex = 3;
@@ -200,7 +205,7 @@
             // lblSugestaoOrcamento
             // 
             this.lblSugestaoOrcamento.AutoSize = true;
-            this.lblSugestaoOrcamento.Location = new System.Drawing.Point(511, 6);
+            this.lblSugestaoOrcamento.Location = new System.Drawing.Point(513, 6);
             this.lblSugestaoOrcamento.Name = "lblSugestaoOrcamento";
             this.lblSugestaoOrcamento.Size = new System.Drawing.Size(77, 17);
             this.lblSugestaoOrcamento.TabIndex = 2;
@@ -216,6 +221,7 @@
             this.btnGerarSugestoes.TabIndex = 1;
             this.btnGerarSugestoes.Text = "Gerar Sugestoes";
             this.btnGerarSugestoes.UseVisualStyleBackColor = false;
+            this.btnGerarSugestoes.Click += new System.EventHandler(this.btnGerarSugestoes_Click);
             // 
             // listBoxArtigosSugeridos
             // 
@@ -227,6 +233,17 @@
             this.listBoxArtigosSugeridos.Size = new System.Drawing.Size(717, 395);
             this.listBoxArtigosSugeridos.TabIndex = 0;
             this.listBoxArtigosSugeridos.SelectedIndexChanged += new System.EventHandler(this.listBoxArtigosSugeridos_SelectedIndexChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Estatisticas
             // 
@@ -245,6 +262,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,7 +275,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ListBox listBoxHistoricoMensal;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListBox listBoxArtigosSugeridos;
         private System.Windows.Forms.Label lblSemanaAtualIdentificada;
         private System.Windows.Forms.ListBox listBoxComprasPercentagens;
         private System.Windows.Forms.Label lblSugestaoOrcamento;
@@ -267,5 +284,7 @@
         private System.Windows.Forms.RadioButton rbSemana2;
         private System.Windows.Forms.RadioButton rbSemana1;
         private System.Windows.Forms.Label lblSemanaIdentificada;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.ListBox listBoxArtigosSugeridos;
     }
 }

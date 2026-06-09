@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Controllers\EstatisticasController.cs" />
     <Compile Include="Estatisticas.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estatisticas.Designer.cs">
       <DependentUpon>Estatisticas.cs</DependentUpon>
@@ -78,7 +79,6 @@
     <Compile Include="Criar_AlterarCompraForm.Designer.cs">
       <DependentUpon>Criar_AlterarCompraForm.cs</DependentUpon>
     </Compile>
-      <SubType>Form</SubType>
     <Compile Include="Models\Artigo.cs" />
     <Compile Include="Controllers\ArtigoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />

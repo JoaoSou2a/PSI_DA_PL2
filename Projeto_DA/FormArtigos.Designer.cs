@@ -43,7 +43,8 @@ namespace Projeto_DA
             this.cbEditarCategoria = new System.Windows.Forms.ComboBox();
             this.btnEditarArtigo = new System.Windows.Forms.Button();
             this.btnEliminarArtigo = new System.Windows.Forms.Button();
-            this.lstArtigos = new System.Windows.Forms.ListBox();
+
+            this.lstArtigo = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).BeginInit();
             this.SuspendLayout();
@@ -80,17 +81,6 @@ namespace Projeto_DA
             this.txtgestaoartigos.Size = new System.Drawing.Size(257, 36);
             this.txtgestaoartigos.TabIndex = 2;
             this.txtgestaoartigos.Text = "Gestão de Artigos";
-            // 
-            // lstArtigos
-            // 
-            this.lstArtigos.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstArtigos.FormattingEnabled = true;
-            this.lstArtigos.ItemHeight = 26;
-            this.lstArtigos.Location = new System.Drawing.Point(706, 133);
-            this.lstArtigos.Name = "lstArtigos";
-            this.lstArtigos.Size = new System.Drawing.Size(554, 576);
-            this.lstArtigos.TabIndex = 1;
-            this.lstArtigos.SelectedIndexChanged += new System.EventHandler(this.lstArtigos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -204,14 +194,17 @@ namespace Projeto_DA
             this.btnEliminarArtigo.UseVisualStyleBackColor = false;
             this.btnEliminarArtigo.Click += new System.EventHandler(this.btnEliminarArtigo_Click);
             // 
-            // lstArtigos
+           
+            // lstArtigo
             // 
-            this.lstArtigos.FormattingEnabled = true;
-            this.lstArtigos.ItemHeight = 16;
-            this.lstArtigos.Location = new System.Drawing.Point(35, 234);
-            this.lstArtigos.Name = "lstArtigos";
-            this.lstArtigos.Size = new System.Drawing.Size(503, 340);
-            this.lstArtigos.TabIndex = 13;
+            this.lstArtigo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstArtigo.FormattingEnabled = true;
+            this.lstArtigo.ItemHeight = 26;
+            this.lstArtigo.Location = new System.Drawing.Point(659, 152);
+            this.lstArtigo.Name = "lstArtigo";
+            this.lstArtigo.Size = new System.Drawing.Size(553, 498);
+            this.lstArtigo.TabIndex = 13;
+            this.lstArtigo.SelectedIndexChanged += new System.EventHandler(this.lstArtigo_SelectedIndexChanged);
             // 
             // FormArtigos
             // 
@@ -219,6 +212,7 @@ namespace Projeto_DA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1290, 741);
+            this.Controls.Add(this.lstArtigo);
             this.Controls.Add(this.btnEliminarArtigo);
             this.Controls.Add(this.btnEditarArtigo);
             this.Controls.Add(this.cbEditarCategoria);
@@ -258,6 +252,6 @@ namespace Projeto_DA
         private System.Windows.Forms.Button btnEditarArtigo;
         private System.Windows.Forms.Button btnEliminarArtigo;
         private System.Windows.Forms.PictureBox picbox_voltar;
-        private System.Windows.Forms.ListBox lstArtigos;
+        private System.Windows.Forms.ListBox lstArtigo;
     }
 }

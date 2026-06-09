@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto_DA
 {
@@ -123,5 +124,67 @@ namespace Projeto_DA
                 CarregarCompras();
             }
         }
+
+        private void btn_ExportarCSV_Click(object sender, EventArgs e)
+        {
+            //obter os dados tratados vindos do controlador
+            var dadosExportacao = controller.ObterDadosParaExportacao();
+
+            if (dadosExportacao == null || dadosExportacao.Count == 0)
+            {
+                MessageBox.Show("Não existem compras fechadas com dados para exportar.", "Informação",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            //configurar a Janela para o utilizador escolher onde guardar o ficheiro CSV
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Ficheiro CSV (*.csv)|*.csv";
+                saveFileDialog.Title = "Exportar Compras Fechadas para CSV";
+                saveFileDialog.FileName = $"Exportacao_Compras_{DateTime.Now:yyyyMMdd_HHmm}.csv";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        StringBuilder csvContent = new StringBuilder();
+
+                        
+                        
+                        csvContent.AppendLine("NomeCompra\t\t; DataCriacao\t\t; DataFechada\t\t; NomeArtigo\t; ArtigoPrevisto\t; ArtigoNaoPrevisto\t; QtdPrev\t; QtdAdq\t; PrecoUnitario");
+                        csvContent.AppendLine("------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+                        //preencher os dados linha a linha alinhados dinamicamente
+                        foreach (var linha in dadosExportacao)
+                        {
+                            string dataCriacaoStr = linha.DataCriacao.ToString("dd/MM/yyyy HH:mm");
+                            string dataFechadaStr = linha.DataFechada.ToString("dd/MM/yyyy HH:mm");
+
+                            //trunca ou ajusta o tamanho dos nomes para não empurrar as colunas para o lado no Bloco de Notas
+                            string nomeCompra = (linha.NomeCompra ?? "").PadRight(15);
+                            string nomeArtigo = (linha.NomeArtigo ?? "").PadRight(12);
+
+                            string precoStr = linha.PrecoUnitario.ToString("F2").Replace(",", ".") + "€";
+
+                            //monta a linha usando tabulações para o Bloco de Notas alinhar verticalmente
+                            csvContent.AppendLine($"{nomeCompra}\t; {dataCriacaoStr}\t; {dataFechadaStr}\t; {nomeArtigo}\t; {linha.ArtigoPrevisto}\t\t; {linha.ArtigoNaoPrevisto}\t\t; {linha.QuantidadePrevista}\t; {linha.QuantidadeAdquirida}\t; {precoStr}");
+                        }
+
+                        //gravar com Encoding UTF8 para o Bloco de Notas reconhecer o 'ã' do "Não" imediatamente
+                        File.WriteAllText(saveFileDialog.FileName, csvContent.ToString(), Encoding.UTF8);
+
+                        MessageBox.Show("Exportação concluída com sucesso!",
+                            "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ocorreu um erro ao exportar o ficheiro: {ex.Message}", "Erro Crítico",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
+    
 }
