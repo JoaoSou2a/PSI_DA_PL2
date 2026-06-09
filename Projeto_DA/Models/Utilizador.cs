@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_DA.Models
 {
-    internal class Utilizador
+    public class Utilizador
     {
         public int Id { get; set; }
         public string Username { get; set; }
@@ -15,7 +15,7 @@ namespace Projeto_DA.Models
 
         public override string ToString()
         {
-            return $"{Nome} ({Username})";
+            return $"{Nome}";
         }
 
     }

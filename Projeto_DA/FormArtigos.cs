@@ -193,5 +193,14 @@ namespace Projeto_DA
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            PrincipalForm form = new PrincipalForm();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }
