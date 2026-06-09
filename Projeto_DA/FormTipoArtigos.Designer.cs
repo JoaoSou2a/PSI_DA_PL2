@@ -1,4 +1,4 @@
-﻿namespace Projeto_DA
+namespace Projeto_DA
 {
     partial class FormTipoArtigos
     {
@@ -29,20 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTipoArtigos));
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAdicionarTipo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEliminarTipo = new System.Windows.Forms.Button();
             this.btnEditarTipo = new System.Windows.Forms.Button();
             this.txtEditarTipo = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picbox_voltar = new System.Windows.Forms.PictureBox();
             this.btnArt = new System.Windows.Forms.Button();
             this.lstTipos = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnAdicionarTipo
+            // 
+            this.btnAdicionarTipo.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAdicionarTipo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarTipo.Location = new System.Drawing.Point(222, 220);
+            this.btnAdicionarTipo.Name = "btnAdicionarTipo";
+            this.btnAdicionarTipo.Size = new System.Drawing.Size(150, 36);
+            this.btnAdicionarTipo.TabIndex = 3;
+            this.btnAdicionarTipo.Text = "Adicionar";
+            this.btnAdicionarTipo.UseVisualStyleBackColor = false;
+            this.btnAdicionarTipo.Click += new System.EventHandler(this.btnAdicionarTipo_Click);
             // 
             // label1
             // 
@@ -56,43 +68,32 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Gestão do Tipo de Artigos";
             // 
-            // btnAdicionarTipo
-            // 
-            this.btnAdicionarTipo.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnAdicionarTipo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarTipo.Location = new System.Drawing.Point(164, 280);
-            this.btnAdicionarTipo.Name = "btnAdicionarTipo";
-            this.btnAdicionarTipo.Size = new System.Drawing.Size(150, 44);
-            this.btnAdicionarTipo.TabIndex = 3;
-            this.btnAdicionarTipo.Text = "Adicionar";
-            this.btnAdicionarTipo.UseVisualStyleBackColor = false;
-            this.btnAdicionarTipo.Click += new System.EventHandler(this.btnAdicionarTipo_Click);
-            // 
             // txtCategoria
             // 
-            this.txtCategoria.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoria.Location = new System.Drawing.Point(148, 244);
+            this.txtCategoria.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(207, 174);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(176, 30);
+            this.txtCategoria.Size = new System.Drawing.Size(176, 40);
             this.txtCategoria.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(160, 212);
+            this.label2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(202, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 24);
+            this.label2.Size = new System.Drawing.Size(204, 26);
             this.label2.TabIndex = 5;
             this.label2.Text = "Adicionar Novo Tipo:";
             // 
             // btnEliminarTipo
             // 
-            this.btnEliminarTipo.BackColor = System.Drawing.Color.Tomato;
-            this.btnEliminarTipo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarTipo.Location = new System.Drawing.Point(278, 421);
+            this.btnEliminarTipo.BackColor = System.Drawing.Color.IndianRed;
+            this.btnEliminarTipo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarTipo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminarTipo.Location = new System.Drawing.Point(222, 440);
             this.btnEliminarTipo.Name = "btnEliminarTipo";
-            this.btnEliminarTipo.Size = new System.Drawing.Size(150, 44);
+            this.btnEliminarTipo.Size = new System.Drawing.Size(150, 40);
             this.btnEliminarTipo.TabIndex = 6;
             this.btnEliminarTipo.Text = "Eliminar";
             this.btnEliminarTipo.UseVisualStyleBackColor = false;
@@ -100,9 +101,9 @@
             // 
             // btnEditarTipo
             // 
-            this.btnEditarTipo.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnEditarTipo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarTipo.Location = new System.Drawing.Point(55, 421);
+            this.btnEditarTipo.BackColor = System.Drawing.Color.Khaki;
+            this.btnEditarTipo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarTipo.Location = new System.Drawing.Point(222, 364);
             this.btnEditarTipo.Name = "btnEditarTipo";
             this.btnEditarTipo.Size = new System.Drawing.Size(150, 44);
             this.btnEditarTipo.TabIndex = 7;
@@ -112,32 +113,21 @@
             // 
             // txtEditarTipo
             // 
-            this.txtEditarTipo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditarTipo.Location = new System.Drawing.Point(42, 385);
+            this.txtEditarTipo.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditarTipo.Location = new System.Drawing.Point(207, 318);
             this.txtEditarTipo.Name = "txtEditarTipo";
-            this.txtEditarTipo.Size = new System.Drawing.Size(176, 30);
+            this.txtEditarTipo.Size = new System.Drawing.Size(176, 40);
             this.txtEditarTipo.TabIndex = 8;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.picbox_voltar);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(-1, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1156, 100);
             this.panel2.TabIndex = 10;
-            // 
-            // picbox_voltar
-            // 
-            this.picbox_voltar.Image = ((System.Drawing.Image)(resources.GetObject("picbox_voltar.Image")));
-            this.picbox_voltar.Location = new System.Drawing.Point(43, 35);
-            this.picbox_voltar.Name = "picbox_voltar";
-            this.picbox_voltar.Size = new System.Drawing.Size(50, 39);
-            this.picbox_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picbox_voltar.TabIndex = 2;
-            this.picbox_voltar.TabStop = false;
-            this.picbox_voltar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnArt
             // 
@@ -152,22 +142,32 @@
             // 
             // lstTipos
             // 
-            this.lstTipos.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstTipos.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstTipos.FormattingEnabled = true;
-            this.lstTipos.ItemHeight = 24;
-            this.lstTipos.Location = new System.Drawing.Point(474, 119);
+            this.lstTipos.ItemHeight = 26;
+            this.lstTipos.Location = new System.Drawing.Point(487, 157);
             this.lstTipos.Name = "lstTipos";
-            this.lstTipos.Size = new System.Drawing.Size(578, 388);
+            this.lstTipos.Size = new System.Drawing.Size(486, 316);
             this.lstTipos.TabIndex = 11;
             this.lstTipos.SelectedIndexChanged += new System.EventHandler(this.lstTipos_SelectedIndexChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(48, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // FormTipoArtigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1077, 568);
-            this.Controls.Add(this.btnArt);
+            this.ClientSize = new System.Drawing.Size(1154, 597);
             this.Controls.Add(this.lstTipos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtEditarTipo);
@@ -181,7 +181,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,7 +189,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAdicionarTipo;
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminarTipo;
@@ -199,5 +198,7 @@
         private System.Windows.Forms.ListBox lstTipos;
         private System.Windows.Forms.Button btnArt;
         private System.Windows.Forms.PictureBox picbox_voltar;
+        private System.Windows.Forms.Button btnAdicionarTipo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

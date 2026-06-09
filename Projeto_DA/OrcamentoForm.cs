@@ -1,4 +1,4 @@
-﻿using Projeto_DA.Controllers;
+using Projeto_DA.Controllers;
 using Projeto_DA.Models;
 using System;
 using System.Collections.Generic;
@@ -89,7 +89,7 @@ namespace Projeto_DA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // 1. Validação: O utilizador clicou mesmo em algum orçamento antes?
+            //validacao
             if (orcamentoSelecionado == null)
             {
                 MessageBox.Show("Por favor, selecione primeiro um orçamento na lista para o poder alterar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -101,8 +101,8 @@ namespace Projeto_DA
             int novoMes = (int)numericMesEditar.Value;
             int novoAno = (int)numericAnoEditar.Value;
 
-            
-            bool sucesso = orcamentoController.Atualizar(orcamentoSelecionado.Id, novoValor, novoMes, novoAno);
+            int idLogado = Sessao.UtilizadorLogado.Id;
+            bool sucesso = orcamentoController.Atualizar(orcamentoSelecionado.Id, novoValor, novoMes, novoAno, idLogado);
 
             if (sucesso)
             {

@@ -44,8 +44,44 @@ namespace Projeto_DA
             {
                 string nomeMes = new DateTime(orcamento.Ano, orcamento.Mes, 1).ToString("MMMM");
                 nomeMes = char.ToUpper(nomeMes[0]) + nomeMes.Substring(1);
+
+                //calcular o total REAL gasto em compras fechadas neste mês/ano
+                decimal totalGastoNoMes = 0;
+
+                using (var db = new IShoppingContext())
+                {
+                    //filtra as compras que foram fechadas no mesmo mês e ano do orçamento atual
+                    var comprasFechadasDoMes = db.Compras
+                        .Where(c => c.Fechada && c.DataFechada.HasValue &&
+                                    c.DataFechada.Value.Month == orcamento.Mes &&
+                                    c.DataFechada.Value.Year == orcamento.Ano)
+                        .ToList();
+
+                    // Soma o valor real de todos os itens associados a estas compras
+                    foreach (var comp in comprasFechadasDoMes)
+                    {
+                        totalGastoNoMes += db.Set<ItemCompra>()
+                            .Where(i => i.Compra.Id == comp.Id)
+                            .Sum(i => (decimal?)(i.QuantidadeAdquirida * i.PrecoUnitario)) ?? 0;
+                    }
+                }
+
+                //calcular o dinheiro que sobra subtraindo o gasto real
+                decimal disponivelRestante = orcamento.ValorMaximo - totalGastoNoMes;
+
+                //atualizar as labels com as contas certas
                 lb_orcamento.Text = $"Orçamento para o mês de {nomeMes}: {orcamento.ValorMaximo:F2}€";
-                lb_dinheirorestante.Text = $"{orcamento.ValorMaximo:F2}€ disponível";
+                lb_dinheirorestante.Text = $"{disponivelRestante:F2}€ disponível";
+
+                //margem visual de segurança (muda a cor para vermelho se estourares o orçamento)
+                if (disponivelRestante < 0)
+                {
+                    lb_dinheirorestante.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lb_dinheirorestante.ForeColor = Color.LightGreen;
+                }
             }
             else
             {
@@ -120,9 +156,30 @@ namespace Projeto_DA
         {
             Compra compraSelecionada = ltb_ComprasAberto.SelectedItem as Compra;
 
+            if (compraSelecionada == null)
+            {
+                MessageBox.Show("Por favor, selecione uma compra em aberto na lista para entrar no Modo Compra!",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ModoCompraForm form = new ModoCompraForm(compraSelecionada);
             form.ShowDialog();
             CarregarComprasEmAberto();
+        }
+
+        private void btnEstatisticas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Estatisticas form = new Estatisticas();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void lb_orcamento_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

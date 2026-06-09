@@ -15,9 +15,10 @@ namespace Projeto_DA.Controllers
         {
             using (var db = new IShoppingContext())
             {
+                string passwordEncriptada = Seguranca.EncriptarPassword(password);
                 Utilizador utilizador = db.Utilizadores
                     .Where(cli => cli.Username.ToLower() == username.ToLower() &&
-                     cli.Password == password)
+                     cli.Password == passwordEncriptada)
                     .Select(cli => cli)
                     .FirstOrDefault();
 

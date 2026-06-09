@@ -112,6 +112,7 @@
             this.btn_ExportarCSV.TabIndex = 12;
             this.btn_ExportarCSV.Text = "Exportar CSV";
             this.btn_ExportarCSV.UseVisualStyleBackColor = false;
+            this.btn_ExportarCSV.Click += new System.EventHandler(this.btn_ExportarCSV_Click);
             // 
             // comboBox_Criadopor
             // 

@@ -63,19 +63,19 @@
             // 
             // listBoxUtilizadores
             // 
-            this.listBoxUtilizadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxUtilizadores.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxUtilizadores.FormattingEnabled = true;
-            this.listBoxUtilizadores.ItemHeight = 25;
+            this.listBoxUtilizadores.ItemHeight = 26;
             this.listBoxUtilizadores.Location = new System.Drawing.Point(195, 114);
             this.listBoxUtilizadores.Name = "listBoxUtilizadores";
-            this.listBoxUtilizadores.Size = new System.Drawing.Size(750, 404);
+            this.listBoxUtilizadores.Size = new System.Drawing.Size(750, 394);
             this.listBoxUtilizadores.TabIndex = 3;
             this.listBoxUtilizadores.SelectedIndexChanged += new System.EventHandler(this.listBoxUtilizadores_SelectedIndexChanged);
             // 
             // btnRemoverUtilizador
             // 
             this.btnRemoverUtilizador.BackColor = System.Drawing.Color.IndianRed;
-            this.btnRemoverUtilizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverUtilizador.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoverUtilizador.ForeColor = System.Drawing.Color.White;
             this.btnRemoverUtilizador.Location = new System.Drawing.Point(470, 524);
             this.btnRemoverUtilizador.Name = "btnRemoverUtilizador";

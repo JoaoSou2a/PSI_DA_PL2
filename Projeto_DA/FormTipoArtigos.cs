@@ -1,6 +1,7 @@
 ﻿using Projeto_DA.Models;
 using System;
 using System.ComponentModel;
+using System.Data.Entity.Infrastructure; // Importante para capturar o DbUpdateException
 using System.Linq;
 using System.Windows.Forms;
 
@@ -42,12 +43,26 @@ namespace Projeto_DA
                 Categoria = txtCategoria.Text.Trim()
             };
 
-            db.TipoArtigos.Add(novoTipo);
-            db.SaveChanges();
+            try
+            {
+                db.TipoArtigos.Add(novoTipo);
+                db.SaveChanges();
 
-            LoadTipos();
-            txtCategoria.Clear();
-            MessageBox.Show("Categoria adicionada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadTipos();
+                txtCategoria.Clear();
+                MessageBox.Show("Categoria adicionada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (DbUpdateException)
+            {
+                db.Entry(novoTipo).State = System.Data.Entity.EntityState.Detached;
+
+                MessageBox.Show("Erro ao guardar na Base de Dados. Verifica se o ID da tabela está configurado como Identity (Auto-incremento) ou se a categoria já existe.",
+                    "Erro de Base de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro inesperado: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEditarTipo_Click(object sender, EventArgs e)
@@ -65,12 +80,23 @@ namespace Projeto_DA
             }
 
             var tipoSelecionado = (TipoArtigo)lstTipos.SelectedItem;
+            string valorOriginal = tipoSelecionado.Categoria; // Salvaguarda
+
             tipoSelecionado.Categoria = txtEditarTipo.Text.Trim();
 
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+                LoadTipos();
+                MessageBox.Show("Categoria atualizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (DbUpdateException)
+            {
+                tipoSelecionado.Categoria = valorOriginal;
 
-            LoadTipos();
-            MessageBox.Show("Categoria atualizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não foi possível atualizar a categoria. Verifica se existem restrições de tamanho ou valores duplicados na BD.",
+                    "Erro ao Atualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminarTipo_Click(object sender, EventArgs e)
@@ -91,12 +117,26 @@ namespace Projeto_DA
 
             if (confirm == DialogResult.Yes)
             {
-                db.TipoArtigos.Remove(tipoSelecionado);
-                db.SaveChanges();
+                try
+                {
+                    db.TipoArtigos.Remove(tipoSelecionado);
+                    db.SaveChanges();
 
-                LoadTipos();
-                txtEditarTipo.Clear();
-                MessageBox.Show("Categoria eliminada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadTipos();
+                    txtEditarTipo.Clear();
+                    MessageBox.Show("Categoria eliminada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (DbUpdateException)
+                {
+                   db.Entry(tipoSelecionado).State = System.Data.Entity.EntityState.Unchanged;
+
+                    MessageBox.Show("Não pode eliminar esta categoria porque existem Artigos associados a ela! Elimine ou mude esses artigos primeiro.",
+                        "Erro de Integridade", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao eliminar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -116,7 +156,6 @@ namespace Projeto_DA
         private void btnArt_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             FormArtigos formArtigos = new FormArtigos();
             formArtigos.ShowDialog();
             this.Close();
@@ -125,10 +164,14 @@ namespace Projeto_DA
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             PrincipalForm form = new PrincipalForm();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            pictureBox1_Click(sender, e);
         }
     }
 }

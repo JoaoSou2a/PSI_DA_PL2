@@ -14,6 +14,10 @@ namespace Projeto_DA.Models
 
         public int Id { get; set; }
         public Utilizador Utilizador { get; set; }
+  
+
+        // quem editou o Orçamento pela última vez
+        public Utilizador UtilizadorEditor { get; set; }
 
         public decimal ValorMaximo { get; set; }
         public int Mes { get; set; }
@@ -31,7 +35,9 @@ namespace Projeto_DA.Models
         //orçamento aparece listado na ListBox
         public override string ToString()
         {
-            return $"Mês: {Mes:D2}/{Ano} | Valor: {ValorMaximo}€";
+            string criador = Utilizador != null ? Utilizador.Nome : "Sistema";
+            string editor = UtilizadorEditor != null ? $" | Editado por: {UtilizadorEditor.Nome}" : " | Nunca Editado";
+            return $"Mês: {Mes:D2}/{Ano} | Valor: {ValorMaximo}€ | Criado por: {criador}{editor}";
         }
     }
 }

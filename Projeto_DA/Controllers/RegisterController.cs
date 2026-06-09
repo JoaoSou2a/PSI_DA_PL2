@@ -39,7 +39,7 @@ namespace Projeto_DA.Controllers
                 {
                     Username = username,
                     Nome = nome,
-                    Password = password // falta encriptar
+                    Password = Seguranca.EncriptarPassword(password)
                 };
 
                 // guardar na bd
