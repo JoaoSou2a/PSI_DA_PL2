@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_DA
 {
-    internal class ItemCompra
+    public class ItemCompra
     {
         public Artigo Artigo { get; set; }
         public Compra Compra { get; set; }

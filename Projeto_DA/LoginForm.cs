@@ -35,7 +35,7 @@ namespace Projeto_DA
             {
                 this.Hide();
 
-                OrcamentoForm form = new OrcamentoForm();
+                PrincipalForm form = new PrincipalForm();
                 form.ShowDialog();
                 this.Close();
 

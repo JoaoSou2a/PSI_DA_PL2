@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrcamentoForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picbox_voltar = new System.Windows.Forms.PictureBox();
             this.btnCriarOrcamento = new System.Windows.Forms.Button();
             this.numericMes = new System.Windows.Forms.NumericUpDown();
             this.numericAno = new System.Windows.Forms.NumericUpDown();
@@ -47,8 +49,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRemover = new System.Windows.Forms.Button();
-            this.btnIrPara = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericValorMaximo)).BeginInit();
@@ -63,7 +65,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(486, 21);
+            this.label1.Location = new System.Drawing.Point(470, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 39);
             this.label1.TabIndex = 0;
@@ -72,26 +74,40 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.btnIrPara);
+            this.panel1.Controls.Add(this.picbox_voltar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1153, 86);
             this.panel1.TabIndex = 1;
             // 
+            // picbox_voltar
+            // 
+            this.picbox_voltar.Image = ((System.Drawing.Image)(resources.GetObject("picbox_voltar.Image")));
+            this.picbox_voltar.Location = new System.Drawing.Point(50, 27);
+            this.picbox_voltar.Name = "picbox_voltar";
+            this.picbox_voltar.Size = new System.Drawing.Size(50, 39);
+            this.picbox_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbox_voltar.TabIndex = 3;
+            this.picbox_voltar.TabStop = false;
+            this.picbox_voltar.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // btnCriarOrcamento
             // 
-            this.btnCriarOrcamento.Location = new System.Drawing.Point(718, 116);
+            this.btnCriarOrcamento.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnCriarOrcamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarOrcamento.Location = new System.Drawing.Point(537, 115);
             this.btnCriarOrcamento.Name = "btnCriarOrcamento";
-            this.btnCriarOrcamento.Size = new System.Drawing.Size(75, 23);
+            this.btnCriarOrcamento.Size = new System.Drawing.Size(113, 31);
             this.btnCriarOrcamento.TabIndex = 3;
             this.btnCriarOrcamento.Text = "Criar";
-            this.btnCriarOrcamento.UseVisualStyleBackColor = true;
+            this.btnCriarOrcamento.UseVisualStyleBackColor = false;
             this.btnCriarOrcamento.Click += new System.EventHandler(this.btnCriarOrcamento_Click);
             // 
             // numericMes
             // 
-            this.numericMes.Location = new System.Drawing.Point(494, 117);
+            this.numericMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericMes.Location = new System.Drawing.Point(296, 115);
             this.numericMes.Maximum = new decimal(new int[] {
             12,
             0,
@@ -103,7 +119,7 @@
             0,
             0});
             this.numericMes.Name = "numericMes";
-            this.numericMes.Size = new System.Drawing.Size(71, 22);
+            this.numericMes.Size = new System.Drawing.Size(80, 28);
             this.numericMes.TabIndex = 8;
             this.numericMes.Value = new decimal(new int[] {
             1,
@@ -113,7 +129,8 @@
             // 
             // numericAno
             // 
-            this.numericAno.Location = new System.Drawing.Point(627, 117);
+            this.numericAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericAno.Location = new System.Drawing.Point(440, 115);
             this.numericAno.Maximum = new decimal(new int[] {
             2100,
             0,
@@ -125,7 +142,7 @@
             0,
             0});
             this.numericAno.Name = "numericAno";
-            this.numericAno.Size = new System.Drawing.Size(71, 22);
+            this.numericAno.Size = new System.Drawing.Size(82, 28);
             this.numericAno.TabIndex = 9;
             this.numericAno.Value = new decimal(new int[] {
             2026,
@@ -136,27 +153,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(304, 119);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(63, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.Size = new System.Drawing.Size(52, 22);
             this.label2.TabIndex = 11;
             this.label2.Text = "Valor";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(455, 117);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(247, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 16);
+            this.label3.Size = new System.Drawing.Size(43, 22);
             this.label3.TabIndex = 12;
             this.label3.Text = "Mês";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(580, 117);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(392, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 16);
+            this.label4.Size = new System.Drawing.Size(42, 22);
             this.label4.TabIndex = 13;
             this.label4.Text = "Ano";
             // 
@@ -167,64 +187,70 @@
             this.listBoxOrcamentos.ItemHeight = 25;
             this.listBoxOrcamentos.Location = new System.Drawing.Point(51, 175);
             this.listBoxOrcamentos.Name = "listBoxOrcamentos";
-            this.listBoxOrcamentos.Size = new System.Drawing.Size(398, 379);
+            this.listBoxOrcamentos.Size = new System.Drawing.Size(570, 379);
             this.listBoxOrcamentos.TabIndex = 14;
             this.listBoxOrcamentos.SelectedIndexChanged += new System.EventHandler(this.listBoxOrcamentos_SelectedIndexChanged);
             // 
             // numericValorMaximo
             // 
-            this.numericValorMaximo.Location = new System.Drawing.Point(350, 116);
+            this.numericValorMaximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericValorMaximo.Location = new System.Drawing.Point(121, 118);
             this.numericValorMaximo.Maximum = new decimal(new int[] {
             1215752192,
             23,
             0,
             0});
             this.numericValorMaximo.Name = "numericValorMaximo";
-            this.numericValorMaximo.Size = new System.Drawing.Size(99, 22);
+            this.numericValorMaximo.Size = new System.Drawing.Size(99, 28);
             this.numericValorMaximo.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 43);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(30, 73);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 16);
+            this.label6.Size = new System.Drawing.Size(52, 22);
             this.label6.TabIndex = 19;
             this.label6.Text = "Valor";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 112);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(30, 142);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 16);
+            this.label7.Size = new System.Drawing.Size(43, 22);
             this.label7.TabIndex = 20;
             this.label7.Text = "Mês";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 167);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(30, 197);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 16);
+            this.label8.Size = new System.Drawing.Size(42, 22);
             this.label8.TabIndex = 21;
             this.label8.Text = "Ano";
             // 
             // numericValorEditar
             // 
-            this.numericValorEditar.Location = new System.Drawing.Point(81, 43);
+            this.numericValorEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericValorEditar.Location = new System.Drawing.Point(91, 71);
             this.numericValorEditar.Maximum = new decimal(new int[] {
             1215752192,
             23,
             0,
             0});
             this.numericValorEditar.Name = "numericValorEditar";
-            this.numericValorEditar.Size = new System.Drawing.Size(99, 22);
+            this.numericValorEditar.Size = new System.Drawing.Size(207, 28);
             this.numericValorEditar.TabIndex = 22;
             // 
             // numericMesEditar
             // 
-            this.numericMesEditar.Location = new System.Drawing.Point(81, 106);
+            this.numericMesEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericMesEditar.Location = new System.Drawing.Point(90, 140);
             this.numericMesEditar.Maximum = new decimal(new int[] {
             12,
             0,
@@ -236,7 +262,7 @@
             0,
             0});
             this.numericMesEditar.Name = "numericMesEditar";
-            this.numericMesEditar.Size = new System.Drawing.Size(71, 22);
+            this.numericMesEditar.Size = new System.Drawing.Size(179, 28);
             this.numericMesEditar.TabIndex = 23;
             this.numericMesEditar.Value = new decimal(new int[] {
             1,
@@ -246,7 +272,8 @@
             // 
             // numericAnoEditar
             // 
-            this.numericAnoEditar.Location = new System.Drawing.Point(81, 167);
+            this.numericAnoEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericAnoEditar.Location = new System.Drawing.Point(91, 191);
             this.numericAnoEditar.Maximum = new decimal(new int[] {
             2100,
             0,
@@ -258,7 +285,7 @@
             0,
             0});
             this.numericAnoEditar.Name = "numericAnoEditar";
-            this.numericAnoEditar.Size = new System.Drawing.Size(71, 22);
+            this.numericAnoEditar.Size = new System.Drawing.Size(179, 28);
             this.numericAnoEditar.TabIndex = 24;
             this.numericAnoEditar.Value = new decimal(new int[] {
             2026,
@@ -268,12 +295,14 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(23, 229);
+            this.btnGuardar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(75, 305);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(107, 41);
             this.btnGuardar.TabIndex = 25;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // groupBox1
@@ -286,32 +315,25 @@
             this.groupBox1.Controls.Add(this.numericMesEditar);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.numericValorEditar);
-            this.groupBox1.Location = new System.Drawing.Point(734, 175);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(688, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 269);
+            this.groupBox1.Size = new System.Drawing.Size(414, 433);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar Orçamento";
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(152, 229);
+            this.btnRemover.BackColor = System.Drawing.Color.Tomato;
+            this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.Location = new System.Drawing.Point(221, 305);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.Size = new System.Drawing.Size(121, 41);
             this.btnRemover.TabIndex = 26;
             this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.UseVisualStyleBackColor = false;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
-            // btnIrPara
-            // 
-            this.btnIrPara.Location = new System.Drawing.Point(11, 12);
-            this.btnIrPara.Name = "btnIrPara";
-            this.btnIrPara.Size = new System.Drawing.Size(75, 23);
-            this.btnIrPara.TabIndex = 1;
-            this.btnIrPara.Text = "Utilizadores";
-            this.btnIrPara.UseVisualStyleBackColor = true;
-            this.btnIrPara.Click += new System.EventHandler(this.btnIrPara_Click);
             // 
             // OrcamentoForm
             // 
@@ -332,6 +354,7 @@
             this.Text = "OrcamentoForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericValorMaximo)).EndInit();
@@ -366,6 +389,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.Button btnIrPara;
+        private System.Windows.Forms.PictureBox picbox_voltar;
     }
 }

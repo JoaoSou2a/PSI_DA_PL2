@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Projeto_DA
 {
-    internal class ItemNaoPrevisto : ItemCompra
+    public class ItemNaoPrevisto : ItemCompra
     {
-        public int Id { get; set; }
         public string Observacoes {  get; set; }
+
+        public override string ToString()
+        {
+            return $"{Artigo?.Nome} | Qtd: {QuantidadeAdquirida} | {PrecoUnitario:F2}€ | Obs: {Observacoes}";
+        }
     }
 }

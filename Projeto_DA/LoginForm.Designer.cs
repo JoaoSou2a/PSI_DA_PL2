@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -36,7 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIrParaRegisto = new System.Windows.Forms.Button();
+            this.picBox_Logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -44,9 +47,9 @@
             this.btnLogin.BackColor = System.Drawing.Color.LightGreen;
             this.btnLogin.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogin.Location = new System.Drawing.Point(87, 297);
+            this.btnLogin.Location = new System.Drawing.Point(87, 294);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 32);
+            this.btnLogin.Size = new System.Drawing.Size(100, 35);
             this.btnLogin.TabIndex = 13;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -59,17 +62,17 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(76, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 46);
+            this.label3.Size = new System.Drawing.Size(119, 45);
             this.label3.TabIndex = 12;
             this.label3.Text = "LOGIN";
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(69, 237);
+            this.txtPassword.Location = new System.Drawing.Point(63, 238);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(139, 35);
+            this.txtPassword.Size = new System.Drawing.Size(154, 35);
             this.txtPassword.TabIndex = 11;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -87,9 +90,9 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(69, 166);
+            this.txtUsername.Location = new System.Drawing.Point(40, 166);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(139, 35);
+            this.txtUsername.Size = new System.Drawing.Size(191, 35);
             this.txtUsername.TabIndex = 9;
             // 
             // label1
@@ -115,13 +118,13 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(278, 422);
+            this.panel1.Size = new System.Drawing.Size(284, 422);
             this.panel1.TabIndex = 14;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnIrParaRegisto
             // 
-            this.btnIrParaRegisto.Location = new System.Drawing.Point(99, 335);
+            this.btnIrParaRegisto.Location = new System.Drawing.Point(96, 344);
             this.btnIrParaRegisto.Name = "btnIrParaRegisto";
             this.btnIrParaRegisto.Size = new System.Drawing.Size(81, 33);
             this.btnIrParaRegisto.TabIndex = 17;
@@ -129,17 +132,29 @@
             this.btnIrParaRegisto.UseVisualStyleBackColor = true;
             this.btnIrParaRegisto.Click += new System.EventHandler(this.btnIrParaRegisto_Click);
             // 
+            // picBox_Logo
+            // 
+            this.picBox_Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_Logo.BackgroundImage")));
+            this.picBox_Logo.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Logo.Image")));
+            this.picBox_Logo.Location = new System.Drawing.Point(396, 166);
+            this.picBox_Logo.Name = "picBox_Logo";
+            this.picBox_Logo.Size = new System.Drawing.Size(198, 50);
+            this.picBox_Logo.TabIndex = 15;
+            this.picBox_Logo.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(678, 414);
+            this.Controls.Add(this.picBox_Logo);
             this.Controls.Add(this.panel1);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +168,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnIrParaRegisto;
+        private System.Windows.Forms.PictureBox picBox_Logo;
     }
 }

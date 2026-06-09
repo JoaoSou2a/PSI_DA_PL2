@@ -39,7 +39,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnUtilizadores = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Sair = new System.Windows.Forms.Button();
             this.btnPlaneamento = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEstatisticas = new System.Windows.Forms.Button();
@@ -51,17 +51,17 @@
             this.btnTiposdeArtigos = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBox_Logo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lb_dinheirorestante = new System.Windows.Forms.Label();
+            this.pictBox_LogoUser = new System.Windows.Forms.PictureBox();
+            this.lb_orcamento = new System.Windows.Forms.Label();
+            this.lb_username = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.lb_ComprasAberto = new System.Windows.Forms.Label();
+            this.ltb_ComprasAberto = new System.Windows.Forms.ListBox();
+            this.btn_ModoCompra = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -72,9 +72,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictBox_LogoUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +91,7 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.btnUtilizadores);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Sair);
             this.panel1.Controls.Add(this.btnPlaneamento);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnEstatisticas);
@@ -103,7 +103,7 @@
             this.panel1.Controls.Add(this.btnTiposdeArtigos);
             this.panel1.Controls.Add(this.btnInicio);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.picBox_Logo);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -198,17 +198,19 @@
             this.btnUtilizadores.TabIndex = 17;
             this.btnUtilizadores.Text = "Utilzadores";
             this.btnUtilizadores.UseVisualStyleBackColor = true;
+            this.btnUtilizadores.Click += new System.EventHandler(this.btnUtilizadores_Click);
             // 
-            // button1
+            // btn_Sair
             // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(72, 534);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 26);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Sair";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Sair.BackColor = System.Drawing.Color.Tomato;
+            this.btn_Sair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Sair.Location = new System.Drawing.Point(72, 534);
+            this.btn_Sair.Name = "btn_Sair";
+            this.btn_Sair.Size = new System.Drawing.Size(164, 26);
+            this.btn_Sair.TabIndex = 16;
+            this.btn_Sair.Text = "Sair";
+            this.btn_Sair.UseVisualStyleBackColor = false;
+            this.btn_Sair.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnPlaneamento
             // 
@@ -218,6 +220,7 @@
             this.btnPlaneamento.TabIndex = 15;
             this.btnPlaneamento.Text = "Planeamento";
             this.btnPlaneamento.UseVisualStyleBackColor = true;
+            this.btnPlaneamento.Click += new System.EventHandler(this.btnPlaneamento_Click);
             // 
             // pictureBox2
             // 
@@ -274,6 +277,7 @@
             this.btnOrcamento.TabIndex = 9;
             this.btnOrcamento.Text = "Orçamentos";
             this.btnOrcamento.UseVisualStyleBackColor = true;
+            this.btnOrcamento.Click += new System.EventHandler(this.btnOrcamento_Click);
             // 
             // btnArtigos
             // 
@@ -283,6 +287,7 @@
             this.btnArtigos.TabIndex = 8;
             this.btnArtigos.Text = "Artigos";
             this.btnArtigos.UseVisualStyleBackColor = true;
+            this.btnArtigos.Click += new System.EventHandler(this.btnArtigos_Click);
             // 
             // btnTiposdeArtigos
             // 
@@ -292,6 +297,7 @@
             this.btnTiposdeArtigos.TabIndex = 7;
             this.btnTiposdeArtigos.Text = "Tipos de Artigo";
             this.btnTiposdeArtigos.UseVisualStyleBackColor = true;
+            this.btnTiposdeArtigos.Click += new System.EventHandler(this.btnTiposdeArtigos_Click);
             // 
             // btnInicio
             // 
@@ -301,6 +307,7 @@
             this.btnInicio.TabIndex = 4;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // label2
             // 
@@ -312,14 +319,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Gestão";
             // 
-            // pictureBox1
+            // picBox_Logo
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(72, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 41);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.picBox_Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_Logo.BackgroundImage")));
+            this.picBox_Logo.Location = new System.Drawing.Point(72, 14);
+            this.picBox_Logo.Name = "picBox_Logo";
+            this.picBox_Logo.Size = new System.Drawing.Size(152, 41);
+            this.picBox_Logo.TabIndex = 1;
+            this.picBox_Logo.TabStop = false;
             // 
             // label1
             // 
@@ -335,56 +342,56 @@
             // 
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.lb_dinheirorestante);
+            this.panel2.Controls.Add(this.pictBox_LogoUser);
+            this.panel2.Controls.Add(this.lb_orcamento);
+            this.panel2.Controls.Add(this.lb_username);
             this.panel2.Location = new System.Drawing.Point(302, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(852, 86);
             this.panel2.TabIndex = 7;
             // 
-            // label8
+            // lb_dinheirorestante
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Aqua;
-            this.label8.Location = new System.Drawing.Point(676, 34);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 20);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "dinero disponivel";
+            this.lb_dinheirorestante.AutoSize = true;
+            this.lb_dinheirorestante.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_dinheirorestante.ForeColor = System.Drawing.Color.Aqua;
+            this.lb_dinheirorestante.Location = new System.Drawing.Point(678, 35);
+            this.lb_dinheirorestante.Name = "lb_dinheirorestante";
+            this.lb_dinheirorestante.Size = new System.Drawing.Size(147, 20);
+            this.lb_dinheirorestante.TabIndex = 15;
+            this.lb_dinheirorestante.Text = "dinheiro disponivel";
             // 
-            // pictureBox3
+            // pictBox_LogoUser
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(20, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 61);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
+            this.pictBox_LogoUser.Image = ((System.Drawing.Image)(resources.GetObject("pictBox_LogoUser.Image")));
+            this.pictBox_LogoUser.Location = new System.Drawing.Point(20, 14);
+            this.pictBox_LogoUser.Name = "pictBox_LogoUser";
+            this.pictBox_LogoUser.Size = new System.Drawing.Size(64, 61);
+            this.pictBox_LogoUser.TabIndex = 14;
+            this.pictBox_LogoUser.TabStop = false;
             // 
-            // label5
+            // lb_orcamento
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(361, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Orçamento do mês:";
+            this.lb_orcamento.AutoSize = true;
+            this.lb_orcamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_orcamento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_orcamento.Location = new System.Drawing.Point(314, 35);
+            this.lb_orcamento.Name = "lb_orcamento";
+            this.lb_orcamento.Size = new System.Drawing.Size(174, 20);
+            this.lb_orcamento.TabIndex = 8;
+            this.lb_orcamento.Text = "Orçamento do mês:";
             // 
-            // label4
+            // lb_username
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(90, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "username";
+            this.lb_username.AutoSize = true;
+            this.lb_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_username.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_username.Location = new System.Drawing.Point(90, 35);
+            this.lb_username.Name = "lb_username";
+            this.lb_username.Size = new System.Drawing.Size(91, 20);
+            this.lb_username.TabIndex = 7;
+            this.lb_username.Text = "username";
             // 
             // pictureBox5
             // 
@@ -395,35 +402,38 @@
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
             // 
-            // label6
+            // lb_ComprasAberto
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(391, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 25);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Compras em Aberto";
+            this.lb_ComprasAberto.AutoSize = true;
+            this.lb_ComprasAberto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ComprasAberto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lb_ComprasAberto.Location = new System.Drawing.Point(391, 109);
+            this.lb_ComprasAberto.Name = "lb_ComprasAberto";
+            this.lb_ComprasAberto.Size = new System.Drawing.Size(204, 25);
+            this.lb_ComprasAberto.TabIndex = 16;
+            this.lb_ComprasAberto.Text = "Compras em Aberto";
             // 
-            // listBox1
+            // ltb_ComprasAberto
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(322, 149);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(805, 356);
-            this.listBox1.TabIndex = 17;
+            this.ltb_ComprasAberto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ltb_ComprasAberto.FormattingEnabled = true;
+            this.ltb_ComprasAberto.ItemHeight = 22;
+            this.ltb_ComprasAberto.Location = new System.Drawing.Point(322, 149);
+            this.ltb_ComprasAberto.Name = "ltb_ComprasAberto";
+            this.ltb_ComprasAberto.Size = new System.Drawing.Size(805, 356);
+            this.ltb_ComprasAberto.TabIndex = 17;
             // 
-            // button9
+            // btn_ModoCompra
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(619, 528);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(206, 30);
-            this.button9.TabIndex = 19;
-            this.button9.Text = "Iniciar Modo Compra";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_ModoCompra.BackColor = System.Drawing.Color.DarkOrange;
+            this.btn_ModoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ModoCompra.Location = new System.Drawing.Point(603, 517);
+            this.btn_ModoCompra.Name = "btn_ModoCompra";
+            this.btn_ModoCompra.Size = new System.Drawing.Size(234, 57);
+            this.btn_ModoCompra.TabIndex = 19;
+            this.btn_ModoCompra.Text = "Iniciar Modo Compra";
+            this.btn_ModoCompra.UseVisualStyleBackColor = false;
+            this.btn_ModoCompra.Click += new System.EventHandler(this.btn_ModoCompra_Click);
             // 
             // PrincipalForm
             // 
@@ -431,9 +441,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1154, 597);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btn_ModoCompra);
+            this.Controls.Add(this.ltb_ComprasAberto);
+            this.Controls.Add(this.lb_ComprasAberto);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -450,10 +460,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictBox_LogoUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -465,12 +475,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBox_Logo;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTiposdeArtigos;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lb_orcamento;
+        private System.Windows.Forms.Label lb_username;
         private System.Windows.Forms.Button btnArtigos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnExportarCSV;
@@ -478,14 +488,14 @@
         private System.Windows.Forms.Button btnOrcamento;
         private System.Windows.Forms.Button btnEstatisticas;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictBox_LogoUser;
+        private System.Windows.Forms.Label lb_dinheirorestante;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label lb_ComprasAberto;
+        private System.Windows.Forms.ListBox ltb_ComprasAberto;
         private System.Windows.Forms.Button btnPlaneamento;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ModoCompra;
+        private System.Windows.Forms.Button btn_Sair;
         private System.Windows.Forms.Button btnUtilizadores;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox12;

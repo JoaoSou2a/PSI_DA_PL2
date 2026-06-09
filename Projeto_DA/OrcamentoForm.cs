@@ -162,13 +162,15 @@ namespace Projeto_DA
             }
         }
 
-        private void btnIrPara_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            GestaoUtilizador UtilizadoresForm = new GestaoUtilizador();
-            UtilizadoresForm.ShowDialog();
+            PrincipalForm form = new PrincipalForm();
+            form.ShowDialog();
             this.Close();
         }
+
+
     }
 }

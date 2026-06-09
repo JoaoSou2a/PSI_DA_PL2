@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Projeto_DA
 {
-    internal class ItemPrevisto : ItemCompra
+    public class ItemPrevisto : ItemCompra
     {
-        public int Id { get; set; }
-        public string Observacoes { get; set; }
+        public int QuantidadePrevista { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Artigo?.Nome} | Quantidade Prevista: {QuantidadePrevista} | Qntd: {QuantidadeAdquirida} | Preço Uni: {PrecoUnitario:F2}€";
+        }
+
     }
 }
